@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask the Clitician™ — Dr. Sonya Maya</title>
+  <meta name="description" content="Dr. Sonya Maya — Psychologist, AASECT Certified Sex Therapist & Content Creator. Find all her links here." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --plum:    #3b1f3a;
+      --rose:    #b5547a;
+      --blush:   #e8a0b8;
+      --gold:    #e8c97e;
+      --cream:   #fdf6f0;
+      --card-bg: rgba(255,255,255,0.08);
+      --card-border: rgba(232,201,126,0.25);
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'DM Sans', sans-serif;
+      background: radial-gradient(ellipse at 60% 0%, #5c2d5c 0%, #3b1f3a 45%, #1e0f2a 100%);
+      color: var(--cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 20px 64px;
+    }
+
+    /* Decorative stars */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 15% 12%, rgba(232,201,126,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 8%,  rgba(232,201,126,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 50% 22%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 35%, rgba(232,201,126,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 10% 65%, rgba(232,201,126,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 55% 80%, rgba(232,201,126,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 88%, rgba(255,255,255,0.3) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Avatar */
+    .avatar-wrap {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--rose));
+      padding: 3px;
+      margin-bottom: 4px;
+    }
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--plum);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    /* Header */
+    .header { text-align: center; margin-bottom: 8px; }
+    .header .eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.85;
+      margin-bottom: 6px;
+    }
+    .header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--cream);
+    }
+    .header h1 em {
+      font-style: italic;
+      color: var(--blush);
+    }
+    .header .tagline {
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: rgba(253,246,240,0.65);
+      line-height: 1.5;
+    }
+
+    /* Divider */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 4px 0 12px;
+    }
+
+    /* Section label */
+    .section-label {
+      width: 100%;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.6;
+      padding-left: 4px;
+      margin-top: 8px;
+      margin-bottom: 2px;
+    }
+
+    /* Link cards */
+    a.link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      padding: 15px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--cream);
+      backdrop-filter: blur(10px);
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    }
+    a.link-card:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(232,201,126,0.55);
+      transform: translateY(-2px);
+    }
+    a.link-card:active { transform: translateY(0); }
+
+    .link-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .link-icon.ig   { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+    .link-icon.tt   { background: #010101; border: 1px solid rgba(255,255,255,0.12); }
+    .link-icon.yt   { background: #ff0000; }
+    .link-icon.fan  { background: linear-gradient(135deg, #1a1a2e, #e94560); }
+    .link-icon.web  { background: linear-gradient(135deg, var(--plum), var(--rose)); }
+    .link-icon.mail { background: linear-gradient(135deg, #2c5364, #203a43); }
+
+    .link-text { flex: 1; }
+    .link-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .link-sub {
+      font-size: 0.75rem;
+      color: rgba(253,246,240,0.5);
+      margin-top: 2px;
+    }
+    .link-arrow {
+      font-size: 0.85rem;
+      opacity: 0.35;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      margin-top: 40px;
+      font-size: 0.72rem;
+      color: rgba(253,246,240,0.3);
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+    footer a { color: inherit; text-decoration: none; }
+    footer a:hover { color: rgba(253,246,240,0.6); }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="avatar-wrap">
+      <div class="avatar-inner">☾</div>
+    </div>
+
+    <div class="header">
+      <p class="eyebrow">⋆ Psychologist &amp; Sex Therapist ⋆</p>
+      <h1>Dr. Sonya Maya<br><em>Ask the Clitician™</em></h1>
+      <p class="tagline">Edu-taining content on sexual health &amp; wellness.<br>AASECT Certified · National Coalition for Sexual Health</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-label">Follow along</div>
+
+    <a class="link-card" href="https://www.instagram.com/sonyamaya" target="_blank" rel="noopener">
+      <div class="link-icon ig">📸</div>
+      <div class="link-text">
+        <div class="link-title">Instagram</div>
+        <div class="link-sub">@sonyamaya</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a class="link-card" href="https://www.tiktok.com/@sonya_maya" target="_blank" rel="noopener">
+      <div class="link-icon tt">🎵</div>
+      <div class="link-text">
+        <div class="link-title">TikTok</div>
+        <div class="link-sub">@sonya_maya</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a class="link-card" href="https://www.youtube.com/@SonyaMayaPsychology" target="_blank" rel="noopener">
+      <div class="link-icon yt">▶</div>
+      <div class="link-text">
+        <div class="link-title">YouTube</div>
+        <div class="link-sub">SonyaMayaPsychology</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <div class="section-label">Exclusive content</div>
+
+    <a class="link-card" href="https://sonyamaya.fanpal.tv" target="_blank" rel="noopener">
+      <div class="link-icon fan">✦</div>
+      <div class="link-text">
+        <div class="link-title">FanPal</div>
+        <div class="link-sub">sonyamaya.fanpal.tv</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <div class="section-label">Connect</div>
+
+    <a class="link-card" href="https://www.sonyamaya.com" target="_blank" rel="noopener">
+      <div class="link-icon web">🌙</div>
+      <div class="link-text">
+        <div class="link-title">Website</div>
+        <div class="link-sub">sonyamaya.com</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a class="link-card" href="mailto:sonyamayabusiness@gmail.com">
+      <div class="link-icon mail">✉</div>
+      <div class="link-text">
+        <div class="link-title">Business &amp; Press</div>
+        <div class="link-sub">sonyamayabusiness@gmail.com</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+  </div>
+
+  <footer>
+    <p>⋆☾⋆ &nbsp; asktheclitician.com &nbsp; ⋆☾⋆</p>
+  </footer>
+</body>
+</html>
